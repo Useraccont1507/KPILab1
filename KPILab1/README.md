@@ -19,7 +19,8 @@
 
 ## 3. Діаграма в PlantUML 
 
-[Посилання](https://www.planttext.com)
+![diagram](planuml.png)
+
 
 ```PlantUML
 @startuml
