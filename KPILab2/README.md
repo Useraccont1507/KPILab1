@@ -32,25 +32,38 @@ usecase "Publish Content" as PC
 usecase "Create / Use Tags" as Tags
 usecase "Make Registration / Authorization" as Auth
 usecase "Delete account" as DA
+usecase "Delete content" as DC
+usecase "Edit content" as EC
+usecase "Make complaint" as MC
+usecase "Review complaint" as RCP
 
 Admin --> Auth
 Guest --> Auth
 Guest --> RC
 User --> DA
 User --> RC
+User --> DC
+User --> EC
 Admin --> RC
 User --> PC
 User --> Auth
 User --> FO
 User --> LC
 User --> WC
+User --> MC
 Admin --> BU
 Admin --> DC
-BU ..> RC : <<use>>
+Admin --> RCP
+BU ..> RCP : <<use>>
 DC ..> RC : <<use>>
 LC ..> RC : <<use>>
 WC ..> RC : <<use>>
 FO ..> RC : <<use>>
+DC ..> RCP : <<use>>
+EC ..> PC : <<use>>
+RC ..> PC : <<use>>
+MC ..> RC : <<use>>
+RCP ..> RC : <<use>>
 
 Tags ..> PC : <<extend>>
 
